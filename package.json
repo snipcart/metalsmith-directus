@@ -1,0 +1,19 @@
+{
+  "name": "metalsmith-directus",
+  "version": "1.0.38",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^2.1.5",
+    "debug": "^2.6.1",
+    "directus-sdk-javascript": "^1.1.3",
+    "lodash": "^4.17.4",
+    "slug": "^0.9.1",
+    "slug-component": "^1.1.0"
+  }
+}
