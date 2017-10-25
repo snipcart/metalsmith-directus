@@ -34,8 +34,7 @@ function plugin(options){
 
       var client = new SDK(
         options.accessToken,
-        options.baseURL,
-        1);
+        options.baseURL);
 
       var query = {
         "params": fileMetadata.directus.filter,
@@ -51,7 +50,7 @@ function plugin(options){
 
     function onSuccessfulEntriesFetch(options, done) {
       return function(data){
-        each(data.rows,
+        each(data.data,
           entryProcessor({
             entries              : options.entries,
             template             : options.entry_template,
@@ -66,7 +65,7 @@ function plugin(options){
 
     function onErroneousEntriesFetch(done) {
       return function(err) {
-        debug('An unexpected error happened while trying to fetch the entries (' + err.message +')');
+        debug('An unexpected error happened while trying to fetch the entries (' + err +')');
         done();
       };
     }
